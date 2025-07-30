@@ -1,0 +1,45 @@
+import pygame
+import sys
+
+# بداية pygame
+pygame.init()
+
+# تحديد نافذة العرض
+screen = pygame.display.set_mode((800, 600))
+
+# تحديد عنوان النافذة
+pygame.display.set_caption("لعبة السيارات")
+
+# تحديد لون الخلفية
+background_color = (255, 255, 255)
+
+# تحديد سيارة اللاعب
+player_car = pygame.Rect(100, 100, 50, 50)
+
+# تحديد لون سيارة اللاعب
+player_car_color = (255, 0, 0)
+
+# تحديد سرعة سيارة اللاعب
+player_car_speed = 5
+
+# تحديد الأعداء
+enemies = [pygame.Rect(200, 200, 50, 50), pygame.Rect(300, 300, 50, 50)]
+
+# تحديد لون الأعداء
+enemies_color = (0, 0, 255)
+
+# تحديد سرعة الأعداء
+enemies_speed = 2
+
+# تحديد النقاط
+points = 0
+
+# تحديد خطأ النقاط
+font = pygame.font.Font(None, 36)
+
+# تحديد ساعة الوقت
+clock = pygame.time.Clock()
+
+# تحديد المستويات
+levels = [
+    {"enemies": 2, "enemies_speed": 2},
